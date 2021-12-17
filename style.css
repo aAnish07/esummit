@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body::-webkit-scrollbar {
+    display: none;
+  }
+  
+  body {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  /* =====Pre Loader(Yash)===== */
+  #loader-container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgb(255, 255, 255) url("pre-loader/preloader1.gif") no-repeat center;
+    z-index: 9999;
+  }
