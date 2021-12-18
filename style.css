@@ -1,26 +1,178 @@
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: 'Poppins', sans-serif;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+nav, main, .heading, .footHeading {
+  font-family: 'Bakbak One', cursive;
+}
+
+a {
+  text-decoration: none;
+  color: initial;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* =====Pre Loader(Yash)===== */
+#loader-container {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgb(255, 255, 255) url("pre-loader/preloader1.gif") no-repeat center;
+  z-index: 9999;
+}
+
+nav {
+  height: 8vh;
+  width: 100vw;
+  background-color: #E7DDC4;
+  position: sticky;
+  top: 0px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/*============= Footer (Anish) =============*/
+
+footer {
+  padding: 40px 0px 0px;
+  background-color: #E7DDC4;
+  width: 100vw;
+}
+
+#footWide {
+  display: flex;
+}
+
+#footMob {
+  display: none;
+}
+
+footer * {
+  vertical-align: middle;
+}
+
+.subFooter {
+  width: calc(100%/3);
+  padding-left: 1rem;
+  padding-bottom: 2rem;
+}
+
+.footHeading {
+  margin: 24px auto 24px;
+}
+
+.touch {
+  margin-top: 12px;
+}
+
+.touchIcon {
+  height: 1.6rem;
+  width: 1.6rem;
+  min-height: 1.6rem;
+  min-width: 1.6rem;
+  border-radius: 20%;
+  margin: 6px;
+}
+
+.address {
+  display: flex;
+  align-items: center;
+}
+
+.subFooter.two {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  color: #688883;
+}
+
+#logoContnr {
+  margin-top: 25px;
+}
+
+.socialLink {
+  text-decoration: none;
+  color: #688883;
+  margin: 2px;
+}
+
+.socialLink svg {
+  transition: all 0.5s ease;
+}
+
+.socialLink:hover, .socialLink svg:hover {
+  color: #191E32;
+  transform: scale(1.5);
+  text-decoration: none;
+}
+
+.logoFoot {
+  width: 80%;
+  max-width: 240px;
+  margin-bottom: 30px;
+}
+
+.siteLinks {
+  display: flex;
+  flex-direction: column;
+}
+
+.siteLink {
+  text-decoration: none;
+  color: initial;
+  width: fit-content;
+  color: #688883;
+}
+
+.siteLink:hover {
+  text-decoration: underline;
+}
+
+#copyRight {
+  background-color: #688883;
+  font-size: 0.8rem;
+  text-align: center;
+  padding: 0.3rem;
+}
+
+@media (max-width: 760px) {
+  footer {
+    padding-top: 5px;
   }
-  
-  html {
-    scroll-behavior: smooth;
+  #footMob {
+    display: flex;
+    flex-direction: column;
   }
-  
-  body::-webkit-scrollbar {
+  .subFooter {
+    width: 100vw;
+    padding-bottom: 20px;
+  }
+  .subFooter.two {
+    background-color: rgb(29, 29, 29);
+    padding-top: 50px;
+  }
+  #footWide {
     display: none;
   }
-  
-  body {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-  }
-  
-  /* =====Pre Loader(Yash)===== */
-  #loader-container {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background: rgb(255, 255, 255) url("pre-loader/preloader1.gif") no-repeat center;
-    z-index: 9999;
-  }
+}
