@@ -42,12 +42,101 @@ a:hover {
 nav {
   height: 8vh;
   width: 100vw;
-  background-color: #E7DDC4;
+  background-color: #e7ddc4;
   position: sticky;
   top: 0px;
   display: flex;
   justify-content: space-around;
   align-items: center;
+}
+
+/* ========== Main (Anish) ========== */
+main {
+  height: 92vh;
+  background-color: #E7DDC4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main p {
+  font-size: 2rem;
+}
+
+h1 {
+  font-size: 6.8rem;
+  text-align: center;
+  /* margin: 20px 5px; */
+}
+
+main my-theme {
+  font-size: 4.2rem;
+  text-align: center;
+}
+
+#regButton {
+  background-color: #688883;
+  margin-top: 24px;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+@media (max-width:760px) {
+  main p {
+    font-size: 1.2rem;
+  }
+  h1 {
+    font-size: 4.2rem;
+  }
+  main my-theme {
+    font-size: 2.7rem;
+  }
+  #regButton {
+    font-size: 1.2rem;
+  }
+}
+
+/* ============= Second Screen (Anish) ============= */
+
+.sections {
+  background-color: #688883;
+  padding-top: 20px;
+}
+
+.section {
+  padding: 20px 45px;
+  box-sizing: border-box;
+}
+
+.heading {
+  font-size: 2rem;
+  margin-bottom: 16px;
+  width: 100%;
+  text-align: left;
+}
+
+.theme.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.theme my-theme {
+  font-size: 2rem;
+  margin-bottom: 14px;
+  color: #E7DDC4;
+}
+
+#promoButton {
+  background-color: #E7DDC4;
+  margin-top: 24px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
 }
 
 /*============= Footer (Anish) =============*/
@@ -72,12 +161,15 @@ footer * {
 
 .subFooter {
   width: calc(100%/3);
-  padding-left: 1rem;
+  padding: 1rem;
   padding-bottom: 2rem;
+  box-sizing: border-box;
 }
 
 .footHeading {
   margin: 24px auto 24px;
+  font-size: 1.7rem;
+  font-weight: 400;
 }
 
 .touch {
