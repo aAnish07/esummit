@@ -16,6 +16,12 @@
 
     <!-- Animation source (AOS) : Styles -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- FaviIcon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+    <link rel="icon" href="favicon.ico" />
   </head>
 
   <body>
@@ -23,6 +29,10 @@
     <div id="loader-container"></div>
 
     <nav id="navbar">
+      <div class="brand-title">
+        <a href="#"><img src="esummitlogo.png" alt="E-CELL IITH" /></a>
+      </div>
+  
       <a class="toggle-button" style="scroll-behavior: smooth;">
         <span class="bar"></span>
         <span class="bar"></span>
@@ -34,23 +44,39 @@
           <a href="#aboutUs">ABOUT US</a>
           <a href="#themeSide">ESUMMIT PROMO</a>
           <a>EVENTS</a></li>
-          <a>SPONSORS</a></li>
+          <a href="https://ecell.iith.ac.in/partners/index.html">SPONSORS</a></li>
           <a>TEAM</a>
           <a href="#footWide">CONTACT US</a></li>
-        
+          <a id="navRegister">REGISTER</a>
       </div>
     </nav>
-
+    
     <!-- =====Title of landing page===== -->
     <main id="pageMain">
-      <p>ECELL IITH PRESENTS</p>
-      <h1>E-SUMMIT 2022</h1>
-      <my-theme>EXORDIUM OF RESURGENCE</my-theme>
+      <div class="circle aa"></div>
+      <div class="circle bb"></div>
+      <div class="circle cc"></div>
+     
+      <p id="t1">ECELL IITH PRESENTS</p>
+      <h1 id="t2">E-SUMMIT 2022</h1>
+      <my-theme id="t3">EXORDIUM OF RESURGENCE</my-theme>
       <button id="regButton" class="RegBtn">Register Now</button>
     </main>
 
     <!-- =============================================================================== -->
     <div class="sections" id="sectionMain">
+      <div class="square">
+        <ul class="box">
+            <li id="sqone"></li>
+            <li id="sqtwo"></li>
+            <li id="sqthree"></li>
+            <li id="sqfour"></li>
+            <li id="sqfive"></li>
+            <li id="sqsix"></li>
+            <li id="sqseven"></li>
+            
+        </ul>
+    </div>
 
       <div class="about section">
 
@@ -58,7 +84,7 @@
         <h2 class="heading" id="aboutUs">ABOUT US</h2>
       </div>
       <!-- =============================================================================== -->
-      <div data-aos="zoom-out" data-aos-duration='2500'> 
+      <div data-aos="zoom-in" data-aos-duration='2500'> 
       <div class="content">
           E-Summit is the flagship event of E-Cell IITH which aims to bring
           early entrepreneurs, students, corporates, venture capitalists and
@@ -74,14 +100,27 @@
       </div>
     </div>
       <!-- =============================================================================== -->
+      <div class="sections" id="sectionMain">
+        <div class="square">
+          <ul class="box">
+              <li id="sqone"></li>
+              <li id="sqtwo"></li>
+              <li id="sqthree"></li>
+              <li id="sqfour"></li>
+              <li id="sqfive"></li>
+              <li id="sqsix"></li>
+              <li id="sqseven"></li>
+              
+          </ul>
+      </div>
       <div class="theme section">
         <div data-aos="zoom-in" data-aos-duration='2000'>
         <h2 class="heading" id="themeSide">THEME</h2>
       </div>
-      <div data-aos="zoom-out" data-aos-duration='2500'>
+      <div data-aos="zoom-in" data-aos-duration='2500'>
         <my-theme>Exordium Of Resurgence</my-theme>
       </div>
-        <div data-aos="zoom-out" data-aos-duration='2500'>
+        <div data-aos="zoom-in" data-aos-duration='2500'>
         <div class="content">
           It has been over a year since the pandemic hit the world. Amidst
           countless challenges and uncertainties, many individuals and companies
@@ -102,6 +141,18 @@
       </div>
     </div>
     <!-- =============================================================================== -->
+    <div class="square">
+      <ul class="box">
+          <li id="sqone"></li>
+          <li id="sqtwo"></li>
+          <li id="sqthree"></li>
+          <li id="sqfour"></li>
+          <li id="sqfive"></li>
+          <li id="sqsix"></li>
+          <li id="sqseven"></li>
+          
+      </ul>
+  </div>
       <div class="section events">
         <div data-aos="zoom-in" data-aos-duration='2000'>
         <h2 class="heading">EVENTS</h2>
@@ -109,6 +160,19 @@
         @Yash//@Tanmay
       </div>
       <!-- =============================================================================== -->
+      <div class="square">
+        <ul class="box">
+            <li id="sqone"></li>
+            <li id="sqtwo"></li>
+            <li id="sqthree"></li>
+            <li id="sqfour"></li>
+            <li id="sqfive"></li>
+            <li id="sqsix"></li>
+            <li id="sqseven"></li>
+            
+        </ul>
+    </div>
+
       <div class="section speakers">
         <div data-aos="zoom-in" data-aos-duration='2000'>
         <h2 class="heading">SPEAKERS</h2>
@@ -287,11 +351,9 @@
             </div>
             <h3 class="footHeading">Site Links</h3>
             <div class="siteLinks">
-              <a href="../index.html" class="siteLink">Home</a>
+              <a class="siteLink">Home</a>
               <a href="../ca/index.html" class="siteLink">CA</a>
-              <a href="../startups/index.html" class="siteLink"
-                >Notable Startups</a
-              >
+              <a href="../startups/index.html" class="siteLink">Notable Startups</a>
             </div>
           </div>
         </div>
@@ -536,8 +598,21 @@ buttonTwo.onclick = () => {
     var trailer = document.querySelector(".trailer");
     var iframe = document.querySelector("iframe");
     trailer.classList.toggle("active");
-    iframe.pause();
     iframe.currentTime = 0;
+    iframe.pause();
+    iframe.stopVideo();
+  }
+
+    // back to page-top on reload(Tanmay Shah)
+    window.onbeforeunload = function () {
+    window.scrollTo(0, 0);
+  };
+  // remove fragment as much as it can go without adding an entry in browser history:
+  window.location.replace("#");
+
+  // slice off the remaining '#' in HTML5:
+  if (typeof window.history.replaceState == "function") {
+    history.replaceState({}, "", window.location.href.slice(0, -1));
   }
 
   </script>
