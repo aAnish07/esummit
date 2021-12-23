@@ -45,7 +45,7 @@ a {
   height: 2.5rem;
   background-color: #e7ddc4;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 900;
   justify-content: space-around;
   align-items: center;
@@ -109,7 +109,7 @@ a {
 #navRegister:hover{
   text-decoration: underline;
   transition: 0.5s;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   color: #e7ddc4;
 }
 
@@ -330,7 +330,7 @@ main my-theme {
 
 .speakers{
   background-color: #688883;
-  padding-top: 3rem;
+  padding-top: 3.5rem;
   font-weight: 600; 
 }
 
@@ -339,8 +339,6 @@ main my-theme {
   padding-top: 3rem;
   font-weight: 600;
 }
-
-
 
 
 /* -------------background animation(Yash)------------- */
@@ -463,7 +461,7 @@ main my-theme {
 
 .heading {
   font-size: 3.5rem;
-  margin-bottom: 1rem;
+  padding-bottom: 2rem;
   width: 100%;
   text-align: center;
 }
