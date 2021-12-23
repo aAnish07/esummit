@@ -1,0 +1,256 @@
+*, html, body {
+    padding: 0;
+    margin: 0;
+    
+    ;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+    
+  }
+  
+  #toggleContainer label { 
+    text-align: center;
+    width: 80px;
+  }
+
+  #toggleContainer label .title{
+    width: 50px;
+  }
+  
+  #container {
+    height: 100vh;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  #toggleContainer {
+    height: 10vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 95vw;
+    position: absolute;
+  }
+  
+  #tilesContainer {
+    min-height: 90vh;
+    width: 100vw;
+    margin-top: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    align-content: center;
+    
+  }
+  
+  .tileItem {
+    width: 250px;
+    height: 250px;
+    margin: 5px;
+    border-radius: 5px;
+    
+    transition: all 0.5s ease;
+  }
+  
+  .tileItem:hover {
+     transform: scale(1.05);
+    transition: all 0.5s ease;
+  }
+  
+  #galleryContainer { 
+    height: 90vh;
+    width: 150vh;
+    background: transparent;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    position: relative;
+  }
+
+
+  
+  #toggle {
+    height: 10vh;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    margin: 10px;
+  }
+  
+  #tilesView {
+    min-height: 100vh;
+    width: 100vw;
+    background: linear-gradient(111deg, #688883 0%, #688883 52%, #688883 100%);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  
+  #galleryView {
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(111deg, #688883 0%, #688883 52%, #688883 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #outer3 {
+    width: 100px;
+    height: 40px;
+    background-color: #E7DDC4;
+    margin: 10px auto;
+    border-radius: 3px;
+    border: 2px solid #E7DDC4;
+    transition: all 0.5s;
+  }
+  
+  #slider3 {
+    height: 36px;
+    width: 46px;
+    background-color: #688883;
+    border-radius: 3px;  
+    transition: all 0.5s;
+  }
+  
+  #slider3.active {
+    -webkit-transform: translatex(50px);
+    -ms-transform: translatex(50px);
+    -o-transform: translatex(50px);
+    transform: translatex(50px);
+    transition: all 0.5s;
+    background-color: #6c9e97;
+  }
+  
+  #outer3.outerActive {
+    background-color: #E7DDC4;
+    border: 2px solid #E7DDC4;
+    transition: all 0.5s;
+  }
+  
+  #mainView {
+    height: 450px;
+    width: 450px;  
+    border-radius: 5px;
+    background-color: #688883;
+    margin-left: 10px;
+    margin-right: 10px;
+    z-index: 1;
+    transition: all 0.5s;  
+  }
+  
+  #mainView:hover {
+    transform: scale(1.1);
+    transition: all 0.5s;   
+  }
+  
+  #leftView {
+    height: 400px;
+    width: 150px;
+    opacity: 0.5;
+    border-radius: 5px;
+    transform: skewy(5deg);
+    transform-origin: top right;
+    background-color: #688883;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;  
+  }
+  
+  #leftView:hover {
+    opacity: 1;
+    transition: all 0.5s;
+  }
+  
+  #rightView {
+    height: 400px;
+    width: 150px;
+    opacity: 0.5;
+    border-radius: 5px;
+    transform: skewy(-5deg);
+    transform-origin: top left;
+    background-color: #688883;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   transition: all 0.5s;
+  }
+  
+  #rightView:hover {
+    opacity: 1;
+    transition: all 0.5s;
+  }
+  
+
+  @media (max-width: 650px) {
+    
+    #galleryContainer { 
+      height: 90vh;
+    }
+
+    #mainView {
+      height: 200px;
+      width: 200px; 
+  }
+  #leftView {
+    height: 200px;
+    width: 50px;
+  }
+  #rightView {
+    height: 200px;
+    width: 50px;
+  }
+
+  }
+
+  .navBtns {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    position: absolute;
+    opacity: 0.8;
+    background-color: rgba(0,0,0,0.1);
+    cursor: pointer;
+    color: white;
+  }
+  
+  .navBtns:hover {
+    opacity: 1;
+    transition: all 0.5s;
+    background-color: #cfcfcf;
+  }
+  
+  #navLeft {
+    left: 200px;
+  }
+  #navRight {
+    right: 200px;
+  } 
+  
+  @media (max-width: 500px){
+  #navLeft {
+    left: 20px;
+  }
+  .navBtns{
+    width: 40px;
+    height: 40px;
+    background: transparent;
+  }
+  #navRight {
+    right: 20px;
+  }
+}
+  
+  #linkTag { 
+    cursor: pointer;
+    z-index: 1;
+    box-sizing: border-box;
+  }
