@@ -17,10 +17,7 @@ body {
   scrollbar-width: none;
 }
 
-nav,
-main,
-.heading,
-.footHeading {
+nav,main,.heading,.footHeading {
   font-family: "Bakbak One", cursive;
 }
 
@@ -230,7 +227,7 @@ a {
 
 .bb {
   animation: circle 6s 2s infinite linear;
-  background: #ffffff;
+  background: rgba(4, 88, 63, 0.5);
 }
 
 .cc {
@@ -248,6 +245,10 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+#aboveAbout, #aboveTheme, #aboveEvents{
+  position: relative;
+  padding-top: 3.5rem;
 }
 
 main p {
@@ -288,6 +289,17 @@ main my-theme {
 
 .RegBtn:hover {
   color: #e7ddc4;
+}
+
+@keyframes titleAni{
+  0% {
+    transform: translateY(-100px) rotate(0deg);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(100px) rotate(360deg);
+    opacity: 0.5;
+  }
 }
 
 /* -----------MOBILE RESPONSIVE---------- */
