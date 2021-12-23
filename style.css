@@ -328,6 +328,21 @@ main my-theme {
   font-weight: 600;
 }
 
+.speakers{
+  background-color: #688883;
+  padding-top: 3rem;
+  font-weight: 600; 
+}
+
+.events{
+  background-color: #688883;
+  padding-top: 3rem;
+  font-weight: 600;
+}
+
+
+
+
 /* -------------background animation(Yash)------------- */
 .box {
   position: absolute;
@@ -456,7 +471,7 @@ main my-theme {
 .content, .events, .speakers {
   padding-top: 2rem;
   font-size: 1.4rem;
-  height: 50vh;
+  height: max-content;
 }
 
 .theme.section {
