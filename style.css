@@ -227,7 +227,7 @@ a {
 
 .bb {
   animation: circle 6s 2s infinite linear;
-  background: rgba(4, 88, 63, 0.5);
+  background: white;
 }
 
 .cc {
