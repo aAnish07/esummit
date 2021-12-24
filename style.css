@@ -92,8 +92,8 @@ a {
 }
 
 .toggle-button .bar {
-  height: 3px;
-  width: 100%;
+  height: 5px;
+  width: 30px;
   background-color: rgb(0, 0, 0);
   border-radius: 10px;
 }
@@ -211,8 +211,6 @@ a {
   }
 }
 
-
-
 .circle {
   z-index: 999;
   width: 5rem;
@@ -231,7 +229,7 @@ a {
 
 .bb {
   animation: circle 6s 2s infinite linear;
-  background: rgba(4, 88, 63, 0.5);
+  background: white;
 }
 
 .cc {
@@ -309,16 +307,16 @@ main my-theme {
 /* -----------MOBILE RESPONSIVE---------- */
 @media (max-width: 800px) {
   main p {
-    font-size: 2.5rem;
+    font-size: 2.3rem;
   }
   h1 {
-    font-size: 3.5rem;
+    font-size: 3.3rem;
   }
   main my-theme {
-    font-size: 3rem;
+    font-size: 2.6rem;
   }
   #regButton {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
   .brand-title img {
     display: none;
@@ -326,7 +324,7 @@ main my-theme {
 }
 
 
-@media (max-width: 550px){
+@media (max-width: 800px){
   @keyframes circle {
     from {
       transform: scale(0);
@@ -336,6 +334,12 @@ main my-theme {
       transform: scale(4);
       opacity: 0;
     }
+  }
+  .circle {
+    width: 7rem;
+    height: 7rem;
+    left: 40%;
+    top: 45%;
   }
 }
 
@@ -464,6 +468,22 @@ main my-theme {
   background-color: #e7ddc4;
   margin: 15px auto;
 }
+#eventsAfter:after{
+  content: "";
+  display: block;
+  height: 4px;
+  width: 40px;
+  background-color: #e7ddc4;
+  margin: 15px auto;
+}
+#speakerAfter:after{
+  content: "";
+  display: block;
+  height: 4px;
+  width: 40px;
+  background-color: #e7ddc4;
+  margin: 15px auto;
+}
 @keyframes animate1 {
   0% {
     transform: translateY(-100px) rotate(0deg);
@@ -581,14 +601,28 @@ main my-theme {
   .speakers #tiles{
     height: 200vh;
   }
+  .box #sqseven {
+  display: none;
+  }
+  .box #sqeight {
+    display: none;
+  }
+  .box #sqnine {
+    display: none;
+  }
+  
+  .box #sqten {
+    display: none;
+  }
 }
+
 
 
 /*============= Footer (Anish) =============*/
 
 footer {
   padding: 40px 0px 0px;
-  background-color: #e7ddc4;
+  background-color: #e7ddc4 !important;
   width: 100vw;
 }
 
