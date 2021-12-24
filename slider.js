@@ -27,8 +27,6 @@ function add_data() {
 }
 
 
-
-
 document.getElementById("outer3").addEventListener("click", toggleState3);
 
 function toggleState3() {
@@ -63,17 +61,9 @@ function toggleState3() {
 }
 
 let imgObject = [
-    "https://placeimg.com/450/450/any",
-    "https://placeimg.com/450/450/animals",
-    "https://placeimg.com/450/450/architecture",
-    "https://placeimg.com/450/450/nature",
-    "https://placeimg.com/450/450/people",
-    "https://placeimg.com/450/450/tech",
-    "https://picsum.photos/id/1/450/450",
-    "https://picsum.photos/id/8/450/450",
-    "https://picsum.photos/id/12/450/450",
-    "https://picsum.photos/id/15/450/450",
-    "https://picsum.photos/id/5/450/450",
+    "speakers/AjeetKhurana.jpg",
+    "speakers/DevvratArya.jpg",
+    "speakers/tapan_misra.jpg",
 ];
 
 let mainImg = 0;
@@ -83,16 +73,19 @@ let nextImg = 1;
 function loadGallery() {
 
     let mainView = document.getElementById("mainView");
-    mainView.style.background = "url(" + imgObject[mainImg] + ")";
+    mainView.style.background = "url(" + imgObject[mainImg] + ") no-repeat center";
+    mainView.style.backgroundRepeat = "no-repeat";
 
     let leftView = document.getElementById("leftView");
     leftView.style.background = "url(" + imgObject[prevImg] + ")";
+    leftView.style.backgroundRepeat = "no-repeat";
 
     let rightView = document.getElementById("rightView");
     rightView.style.background = "url(" + imgObject[nextImg] + ")";
+    rightView.style.backgroundRepeat = "no-repeat";
 
     let linkTag = document.getElementById("linkTag")
-    linkTag.href = imgObject[mainImg];
+    // linkTag.href = imgObject[mainImg];
 
 };
 
@@ -157,7 +150,6 @@ if ($(window).width() > 800) {
 
                 $('.item-bg').addClass('active');
                 $('.news__item').removeClass('active');
-                // $('.news__item').removeClass('active');
 
 
                 bg.style.width = width + 'px';
