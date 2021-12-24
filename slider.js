@@ -15,12 +15,13 @@ var db = firebase.firestore();
 
 
 function add_data() {
-    const addemail = document.getElementsByClassName(".add");
-    db = db.collection("esummit").doc(addemail.email.value);
+    const addemail = document.getElementById('add');
+    console.log(addemail.value);
+    db = db.collection("esummit").doc(addemail.value);
     db.set({
-        email: addemail.email.value,
+        email: addemail.value,
     }).then(() => {
-        addemail.reset();
+        addemail.value = "";
         window.alert("Email has been recorded");
     });
 }
@@ -173,5 +174,3 @@ if ($(window).width() > 800) {
 
     });
 }
-
-

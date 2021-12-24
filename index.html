@@ -26,11 +26,16 @@
   <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-analytics.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-auth.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-firestore.js"></script>
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 </head>
 
 <body>
   <!-- =====Pre Loader(Yash)===== -->
-  <div id="loader-container"></div>
+  <!-- <div id="loader-container"></div> -->
 
   <nav id="navbar">
     <div class="brand-title">
@@ -51,7 +56,7 @@
       <a href="https://ecell.iith.ac.in/partners/index.html">SPONSORS</a></li>
       <a>TEAM</a>
       <a href="#footWide">CONTACT US</a></li>
-      <a id="navRegister">REGISTER</a>
+      <a id="navRegister" href = "https://dare2compete.com/festival/e-summit-2022-iit-hyderabad-exordium-of-resurgence-indian-institute-of-technology-iit-hyderabad-18684">REGISTER</a>
     </div>
   </nav>
 
@@ -66,7 +71,7 @@
     </div>
     <h1 id="t2">E-SUMMIT 2022</h1>
     <my-theme id="t3">EXORDIUM OF RESURGENCE</my-theme>
-    <button id="regButton" class="RegBtn">Register Now</button>
+    <button id="regButton" class="RegBtn" onclick = "location.href = 'https://dare2compete.com/festival/e-summit-2022-iit-hyderabad-exordium-of-resurgence-indian-institute-of-technology-iit-hyderabad-18684'"">Register Now</button>
   </main>
 
   <!-- =============================================================================== -->
@@ -386,9 +391,9 @@
           <h3 class="footHeading">Stay Updated</h3>
           <div>
 
-            <input type="text" name="email" class="add" required placeholder="Enter your email">
+            <input type="text" id="add" required placeholder="Enter your email">
 
-            <button class="btn-stayupdated" onclick="add_data()">➤</button>
+            <button class="btn-stayupdated" onclick="add_data()" type = "submit">➤</button>
 
           </div>
         </div>
@@ -584,7 +589,6 @@
   }
 
 </script>
-
 
 
 
