@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 html {
@@ -10,6 +11,7 @@ html {
 
 body::-webkit-scrollbar {
   display: none;
+  width: 100vw;
 }
 
 body {
@@ -45,7 +47,7 @@ a {
   height: 2.5rem;
   background-color: #e7ddc4;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: 900;
   justify-content: space-around;
   align-items: center;
@@ -109,7 +111,7 @@ a {
 #navRegister:hover{
   text-decoration: underline;
   transition: 0.5s;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   color: #e7ddc4;
 }
 
@@ -209,6 +211,8 @@ a {
   }
 }
 
+
+
 .circle {
   z-index: 999;
   width: 5rem;
@@ -227,7 +231,7 @@ a {
 
 .bb {
   animation: circle 6s 2s infinite linear;
-  background: white;
+  background: rgba(4, 88, 63, 0.5);
 }
 
 .cc {
@@ -321,16 +325,31 @@ main my-theme {
   }
 }
 
+
+@media (max-width: 550px){
+  @keyframes circle {
+    from {
+      transform: scale(0);
+      opacity: 0.5;
+    }
+    to {
+      transform: scale(4);
+      opacity: 0;
+    }
+  }
+}
+
 /* ============= Second Screen (Anish) ============= */
 .sections {
   background-color: #688883;
   padding-top: 3rem;
   font-weight: 600;
+  width: 100vw;
 }
 
 .speakers{
   background-color: #688883;
-  padding-top: 3.5rem;
+  padding-top: 3rem;
   font-weight: 600; 
 }
 
@@ -339,6 +358,8 @@ main my-theme {
   padding-top: 3rem;
   font-weight: 600;
 }
+
+
 
 
 /* -------------background animation(Yash)------------- */
@@ -461,7 +482,7 @@ main my-theme {
 
 .heading {
   font-size: 3.5rem;
-  padding-bottom: 2rem;
+  margin-bottom: 1rem;
   width: 100%;
   text-align: center;
 }
@@ -501,6 +522,7 @@ main my-theme {
   color: #688883;
 }
 
+
 .trailer {
   position: fixed;
   top: 50%;
@@ -510,7 +532,7 @@ main my-theme {
   background-color: rgba(0, 0, 0, 0.4);
   width: 90vw;
   height: 100vh;
-  display: flex;
+  display: flex; 
   justify-content: center;
   align-items: center;
   visibility: hidden;
@@ -538,6 +560,8 @@ main my-theme {
   max-width: 32px;
 }
 
+
+
 /* --------------Mobile Responsive---------- */
 @media (max-width: 991px) {
   .trailer iframe {
@@ -554,7 +578,11 @@ main my-theme {
     font-size: 1.5rem;
     height: max-content;
   }
+  .speakers #tiles{
+    height: 200vh;
+  }
 }
+
 
 /*============= Footer (Anish) =============*/
 
@@ -687,3 +715,7 @@ footer * {
     display: none;
   }
 }
+
+
+
+
