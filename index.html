@@ -22,7 +22,10 @@
   <link rel="manifest" href="/site.webmanifest">
   <link rel="icon" href="favicon.ico" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
-
+  <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-analytics.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-firestore.js"></script>
 </head>
 
 <body>
@@ -179,10 +182,12 @@
 
             <section class="cards-wrapper">
               <div class="card-grid-space">
-                <a class="card" href="https://codetheweb.blog/2017/10/06/html-syntax/"
+                <a class="card"
+                  href="https://dare2compete.com/p/power-talks-and-panel-discussions-e-summit-2022-iit-hyderabad-exordium-of-resurgence-indian-institute-of-technology-ii-250690"
                   style="background-image: url(symposium.png); background-color: black;">
                   <div class=="card-content">
                     <h1>Symposium</h1>
+
                     <div class="date">21 Jan 2022</div>
                     <div class="tags">
                       <button class="register-button">Register</button>
@@ -190,23 +195,29 @@
                   </div>
                 </a>
               </div>
+              <!-- <div class=" card-grid-space">
+                        <a class="card" href="https://codetheweb.blog/2017/10/06/html-syntax/"
+                          style="background-image: url(Microphone-stage-comedy.jpg); background-color: black;">
+                          <div>
+                            <h1>Networking</h1>
+                            <div class="date">21 Jan 2022</div>
+                            <div class="tags">
+                              <button class="register-button">Register</button>
+                            </div>
+                          </div>
+                        </a>
+                    </div> -->
               <div class="card-grid-space">
-                <a class="card" href="https://codetheweb.blog/2017/10/06/html-syntax/"
-                  style="background-image: url(Microphone-stage-comedy.jpg); background-color: black;">
-                  <div>
-                    <h1>Networking</h1>
-                    <div class="date">21 Jan 2022</div>
-                    <div class="tags">
-                      <button class="register-button">Register</button>
-                    </div>
-                  </div>
-                </a>
-              </div>
-              <div class="card-grid-space">
-                <a class="card" href="https://codetheweb.blog/2017/10/06/html-syntax/"
+                <a class="card"
+                  href="https://dare2compete.com/festival/e-summit-2022-iit-hyderabad-exordium-of-resurgence-indian-institute-of-technology-iit-hyderabad-18684"
                   style="background-image: url(Competitions.png); background-color: black;">
                   <div>
                     <h1>Competition</h1>
+                    <p class="comp-content" style="font-size: 16px;">
+                      Pitch your model, explore ideas, show your Entrepreneurship prowess - all of this and much
+                      more.
+                    </p>
+
                     <div class="date">21 Jan 2022</div>
                     <div class="tags">
                       <button class="register-button">Register</button>
@@ -214,7 +225,7 @@
                   </div>
                 </a>
               </div>
-              <div class="card-grid-space">
+              <!-- <div class="card-grid-space">
                 <a class="card" href="https://codetheweb.blog/2017/10/06/html-syntax/"
                   style="background-image: url(Workshops.png); background-color: black;">
                   <div>
@@ -225,7 +236,7 @@
                     </div>
                   </div>
                 </a>
-              </div>
+              </div> -->
               <!-- https://images.unsplash.com/photo-1520839090488-4a6c211e2f94?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=38951b8650067840307cba514b554ba5&auto=format&fit=crop&w=1350&q=80 -->
             </section>
           </div>
@@ -373,7 +384,13 @@
       <div style="width: fit-content; margin: auto">
         <div>
           <h3 class="footHeading">Stay Updated</h3>
-          <div>@Tanmay</div>
+          <div>
+
+            <input type="text" name="email" class="add" required placeholder="Enter your email">
+
+            <button class="btn-stayupdated" onclick="add_data()">➤</button>
+
+          </div>
         </div>
         <h3 class="footHeading">Site Links</h3>
         <div class="siteLinks">
@@ -567,5 +584,9 @@
   }
 
 </script>
+
+
+
+
 
 </html>
