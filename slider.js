@@ -63,9 +63,9 @@ function toggleState3() {
 let imgObject = [
 
     "speakers/Ajeet_Khurana.png",
-    "speakers/Tapan_Misra.png",
+    "speakers/tapan_misra.png",
     "speakers/Devvrat_Arya.png",
-    "speakers/tapan_misra.jpg"
+    "speakers/tapan_misra.png"
 ];
 
 let mainImg = 0;
