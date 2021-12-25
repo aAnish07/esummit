@@ -143,6 +143,7 @@
   #leftView {
     height: 400px;
     width: 150px;
+    
     opacity: 1;
     z-index: 0;
     border-radius: 5px;
@@ -187,16 +188,19 @@
     }
 
     #mainView {
-      height: 200px;
-      width: 200px; 
+      height: 400px;
+      width: 275px; 
+      object-fit: cover;
   }
+  
   #leftView {
-    height: 200px;
-    width: 50px;
+    height: 300px;
+    width: 30px;
   }
+
   #rightView {
-    height: 200px;
-    width: 50px;
+    height: 300px;
+    width: 30px;
   }
 
   }
