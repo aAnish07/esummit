@@ -1,170 +1,249 @@
-var firebaseConfig = {
-    apiKey: "AIzaSyCuI9p--uQFbg6mmm-skoH1eLKiGMTT764",
-    authDomain: "e-cell-iith.firebaseapp.com",
-    databaseURL: "https://e-cell-iith.firebaseio.com",
-    projectId: "e-cell-iith",
-    storageBucket: "e-cell-iith.appspot.com",
-    messagingSenderId: "796712758296",
-    appId: "1:796712758296:web:f8eccb20bb876292dce76d",
-    measurementId: "G-Y2S58PKNF9",
-};
-// Initialize Firebase
-firebase.initializeApp(firebaseConfig);
-firebase.analytics();
-var db = firebase.firestore();
+  #toggleContainer label { 
+    text-align: center;
+    width: 80px;
+  }
+
+  #toggleContainer label .title{
+    width: 50px;
+  }
+  
+  #container {
+    height: fit-content;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  #toggleContainer {
+    height: 10vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 95vw;
+    position: absolute;
+  }
+  
+  #tilesContainer {
+    min-height: max-content;
+    width: 100vw;
+    margin-top: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    align-content: center;
+    
+  }
+  
+  .tileItem {
+    width: 250px;
+    height: 250px;
+    margin: 5px;
+    border-radius: 5px;
+    
+    transition: all 0.5s ease;
+  }
+  
+  .tileItem:hover {
+     transform: scale(1.05);
+    transition: all 0.5s ease;
+  }
+  
+  #galleryContainer { 
+    height: 90vh;
+    width: 150vh;
+    background: transparent;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    position: relative;
+  }
 
 
-function add_data() {
-    const addemail = document.getElementById('add');
-    console.log(addemail.value);
-    db = db.collection("esummit").doc(addemail.value);
-    db.set({
-        email: addemail.value,
-    }).then(() => {
-        addemail.value = "";
-        window.alert("Email has been recorded");
-    });
-}
+  
+  #toggle {
+    height: 10vh;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    margin: 10px;
+  }
+  
+  #tilesView {
+    min-height: 100vh;
+    width: 100vw;
+    background: linear-gradient(111deg, #688883 0%, #688883 52%, #688883 100%);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  
+  #galleryView {
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(111deg, #688883 0%, #688883 52%, #688883 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #outer3 {
+    width: 100px;
+    height: 40px;
+    background-color: #E7DDC4;
+    margin: 10px auto;
+    border-radius: 3px;
+    border: 2px solid #E7DDC4;
+    transition: all 0.5s;
+  }
+  
+  #slider3 {
+    height: 36px;
+    width: 46px;
+    background-color: #688883;
+    border-radius: 3px;  
+    transition: all 0.5s;
+  }
+  
+  #slider3.active {
+    -webkit-transform: translatex(50px);
+    -ms-transform: translatex(50px);
+    -o-transform: translatex(50px);
+    transform: translatex(50px);
+    transition: all 0.5s;
+    background-color: #6c9e97;
+  }
+  
+  #outer3.outerActive {
+    background-color: #E7DDC4;
+    border: 2px solid #E7DDC4;
+    transition: all 0.5s;
+  }
+  
+  #mainView {
+    height: 450px;
+    width: 450px;  
+    border-radius: 5px;
+    background-color: #688883;
+    margin-left: 10px;
+    margin-right: 10px;
+    z-index: 1;
+    transition: all 0.5s;  
+    background-repeat: none;
+  }
+  
+  #mainView:hover {
+    transform: scale(1.1);
+    transition: all 0.5s;   
+  }
+  
+  #leftView {
+    height: 400px;
+    width: 150px;
+    opacity: 1;
+    z-index: 0;
+    border-radius: 5px;
+    transform: skewy(5deg);
+    transform-origin: top right;
+    background-color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;  
+  }
+  
+  #leftView:hover {
+    opacity: 1;
+    transition: all 0.5s;
+  }
+  
+  #rightView {
+    height: 400px;
+    width: 150px;
+    opacity: 0.5;
+    border-radius: 5px;
+    transform: skewy(-5deg);
+    transform-origin: top left;
+    background-color: #688883;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   transition: all 0.5s;
+  }
+  
+  #rightView:hover {
+    opacity: 1;
+    transition: all 0.5s;
+  }
+  
 
-
-document.getElementById("outer3").addEventListener("click", toggleState3);
-
-function toggleState3() {
-    let galleryView = document.getElementById("galleryView")
-    let tilesView = document.getElementById("tilesView")
-    let outer = document.getElementById("outer3");
-    let slider = document.getElementById("slider3");
-    let tilesContainer = document.getElementById("tilesContainer");
-    if (slider.classList.contains("active")) {
-        slider.classList.remove("active");
-        outer.classList.remove("outerActive");
-        galleryView.style.display = "flex";
-        tilesView.style.display = "none";
-
-        while (tilesContainer.hasChildNodes()) {
-            tilesContainer.removeChild(tilesContainer.firstChild)
-        }
-    } else {
-        slider.classList.add("active");
-        outer.classList.add("outerActive");
-        galleryView.style.display = "none";
-        tilesView.style.display = "flex";
-
-        for (let i = 0; i < imgObject.length - 1; i++) {
-            let tileItem = document.createElement("div");
-            tileItem.classList.add("tileItem");
-            tileItem.style.background = "url(" + imgObject[i] + ")";
-            tileItem.style.backgroundSize = "contain";
-            tilesContainer.appendChild(tileItem);
-        }
-    };
-}
-
-let imgObject = [
-
-    "speakers/Ajeet_Khurana.png",
-    "speakers/tapan_misra.png",
-    "speakers/Devvrat_Arya.png",
-    "speakers/tapan_misra.png"
-];
-
-let mainImg = 0;
-let prevImg = imgObject.length - 1;
-let nextImg = 1;
-
-function loadGallery() {
-
-    let mainView = document.getElementById("mainView");
-    mainView.style.background = "url(" + imgObject[mainImg] + ") no-repeat center";
-    mainView.style.backgroundRepeat = "no-repeat";
-
-    let leftView = document.getElementById("leftView");
-    leftView.style.background = "url(" + imgObject[prevImg] + ")";
-    leftView.style.backgroundRepeat = "no-repeat";
-
-    let rightView = document.getElementById("rightView");
-    rightView.style.background = "url(" + imgObject[nextImg] + ")";
-    rightView.style.backgroundRepeat = "no-repeat";
-
-    let linkTag = document.getElementById("linkTag")
-    // linkTag.href = imgObject[mainImg];
-
-};
-
-function scrollRight() {
-
-    prevImg = mainImg;
-    mainImg = nextImg;
-    if (nextImg >= (imgObject.length - 1)) {
-        nextImg = 0;
-    } else {
-        nextImg++;
-    };
-    loadGallery();
-};
-
-function scrollLeft() {
-    nextImg = mainImg
-    mainImg = prevImg;
-
-    if (prevImg === 0) {
-        prevImg = imgObject.length - 1;
-    } else {
-        prevImg--;
-    };
-    loadGallery();
-};
-
-document.getElementById("navRight").addEventListener("click", scrollRight);
-document.getElementById("navLeft").addEventListener("click", scrollLeft);
-document.getElementById("rightView").addEventListener("click", scrollRight);
-document.getElementById("leftView").addEventListener("click", scrollLeft);
-document.addEventListener('keyup', function (e) {
-    if (e.keyCode === 37) {
-        scrollLeft();
-    } else if (e.keyCode === 39) {
-        scrollRight();
+  @media (max-width: 800px) {
+    
+    #galleryContainer { 
+      height: 90vh;
     }
-});
 
-loadGallery();
+    #mainView {
+      height: 200px;
+      width: 200px; 
+  }
+  #leftView {
+    height: 200px;
+    width: 50px;
+  }
+  #rightView {
+    height: 200px;
+    width: 50px;
+  }
 
+  }
 
-
-var bg = document.querySelector('.item-bg');
-var items = document.querySelectorAll('.news__item');
-var item = document.querySelector('.news__item');
-
-function cLog(content) {
-    console.log(content)
+  .navBtns {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    position: absolute;
+    opacity: 0.8;
+    background-color: rgba(0,0,0,0.1);
+    cursor: pointer;
+    color: white;
+  }
+  
+  .navBtns:hover {
+    opacity: 1;
+    transition: all 0.5s;
+    background-color: #cfcfcf;
+  }
+  
+  #navLeft {
+    left: 200px;
+    z-index: 999;
+  }
+  #navRight {
+    right: 200px;
+    z-index: 999;
+  } 
+  
+  @media (max-width: 500px){
+  #navLeft {
+    left: 20px;
+  }
+  .navBtns{
+    width: 40px;
+    height: 40px;
+    background: transparent;
+  }
+  #navRight {
+    right: 20px;
+  }
 }
-
-if ($(window).width() > 800) {
-    $(document).on("mouseover", ".news__item", function (_event, _element) {
-
-        var newsItem = document.querySelectorAll('.news__item');
-        newsItem.forEach(function (element, index) {
-            element.addEventListener('mouseover', function () {
-                var x = this.getBoundingClientRect().left;
-                var y = this.getBoundingClientRect().top;
-                var width = this.getBoundingClientRect().width;
-                var height = this.getBoundingClientRect().height;
-
-                $('.item-bg').addClass('active');
-                $('.news__item').removeClass('active');
-
-
-                bg.style.width = width + 'px';
-                bg.style.height = height + 'px';
-                bg.style.transform = 'translateX(' + x + 'px ) translateY(' + y + 'px)';
-            });
-
-            element.addEventListener('mouseleave', function () {
-                $('.item-bg').removeClass('active');
-                $('.news__item').removeClass('active');
-            });
-
-        });
-
-    });
-}
+  
+  #linkTag { 
+    cursor: pointer;
+    z-index: 1;
+    box-sizing: border-box;
+  }
