@@ -19,7 +19,10 @@ body {
   scrollbar-width: none;
 }
 
-nav,main,.heading,.footHeading {
+nav,
+main,
+.heading,
+.footHeading {
   font-family: "Bakbak One", cursive;
 }
 
@@ -33,7 +36,7 @@ a {
   position: fixed;
   width: 100%;
   height: 100%;
-  background: rgb(255, 255, 255) url("pre-loader/preloader1.gif") no-repeat
+  background: rgb(255, 255, 255) url("../pre-loader/preloader1.gif") no-repeat
     center;
   z-index: 9999;
 }
@@ -98,7 +101,7 @@ a {
   border-radius: 10px;
 }
 
-#navRegister{
+#navRegister {
   font-size: 1.3rem;
   cursor: pointer;
   color: black;
@@ -108,7 +111,7 @@ a {
   box-shadow: #688883 1px 1px 1px;
   transition: step-start;
 }
-#navRegister:hover{
+#navRegister:hover {
   text-decoration: underline;
   transition: 0.5s;
   font-size: 1.4rem;
@@ -248,7 +251,9 @@ main {
   justify-content: center;
   align-items: center;
 }
-#aboveAbout, #aboveTheme, #aboveEvents{
+#aboveAbout,
+#aboveTheme,
+#aboveEvents {
   position: relative;
   padding-top: 3.5rem;
 }
@@ -283,17 +288,17 @@ main my-theme {
   border: none;
   transition: 0.5s;
 }
-#regButton:focus{
+#regButton:focus {
   outline: none;
-    border-color: #9ecaed;
-    box-shadow: 0 0 10px #9ecaed;
+  border-color: #9ecaed;
+  box-shadow: 0 0 10px #9ecaed;
 }
 
 .RegBtn:hover {
   color: #e7ddc4;
 }
 
-@keyframes titleAni{
+@keyframes titleAni {
   0% {
     transform: translateY(-100px) rotate(0deg);
     opacity: 0.5;
@@ -323,8 +328,7 @@ main my-theme {
   }
 }
 
-
-@media (max-width: 800px){
+@media (max-width: 800px) {
   @keyframes circle {
     from {
       transform: scale(0);
@@ -351,20 +355,17 @@ main my-theme {
   width: 100vw;
 }
 
-.speakers{
-  background-color: #688883;
-  padding-top: 3rem;
-  font-weight: 600; 
-}
-
-.events{
+.speakers {
   background-color: #688883;
   padding-top: 3rem;
   font-weight: 600;
 }
 
-
-
+.events {
+  background-color: #688883;
+  padding-top: 3rem;
+  font-weight: 600;
+}
 
 /* -------------background animation(Yash)------------- */
 .box {
@@ -468,7 +469,7 @@ main my-theme {
   background-color: #e7ddc4;
   margin: 15px auto;
 }
-#eventsAfter:after{
+#eventsAfter:after {
   content: "";
   display: block;
   height: 4px;
@@ -476,7 +477,7 @@ main my-theme {
   background-color: #e7ddc4;
   margin: 15px auto;
 }
-#speakerAfter:after{
+#speakerAfter:after {
   content: "";
   display: block;
   height: 4px;
@@ -507,7 +508,9 @@ main my-theme {
   text-align: center;
 }
 
-.content, .events, .speakers {
+.content,
+.events,
+.speakers {
   padding-top: 2rem;
   font-size: 1.4rem;
   height: max-content;
@@ -542,7 +545,6 @@ main my-theme {
   color: #688883;
 }
 
-
 .trailer {
   position: fixed;
   top: 50%;
@@ -552,7 +554,7 @@ main my-theme {
   background-color: rgba(0, 0, 0, 0.4);
   width: 90vw;
   height: 100vh;
-  display: flex; 
+  display: flex;
   justify-content: center;
   align-items: center;
   visibility: hidden;
@@ -580,8 +582,6 @@ main my-theme {
   max-width: 32px;
 }
 
-
-
 /* --------------Mobile Responsive---------- */
 @media (max-width: 991px) {
   .trailer iframe {
@@ -593,18 +593,19 @@ main my-theme {
   .brand-title img {
     display: none;
   }
-  .content, .events, .speakers {
+  .content,
+  .events,
+  .speakers {
     padding-top: 2rem;
     font-size: 1rem;
     height: max-content;
     text-align: center;
-    
   }
-  .speakers #tiles{
+  .speakers #tiles {
     height: 200vh;
   }
   .box #sqseven {
-  display: none;
+    display: none;
   }
   .box #sqeight {
     display: none;
@@ -612,13 +613,11 @@ main my-theme {
   .box #sqnine {
     display: none;
   }
-  
+
   .box #sqten {
     display: none;
   }
 }
-
-
 
 /*============= Footer (Anish) =============*/
 
@@ -752,37 +751,30 @@ footer * {
   }
 }
 
-
-
-
-
-
-.input{
+.input {
   margin-top: -20px;
   padding-top: 1.5vh;
   padding-bottom: 1.5vh;
   padding-left: 1vh;
- border: none;
- border-radius: 1px;
+  border: none;
+  border-radius: 1px;
 }
 
-
-::placeholder{
-  font-family: 'Montserrat', sans-serif;
+::placeholder {
+  font-family: "Montserrat", sans-serif;
   font-size: 15px;
 }
 
-.btn-stayupdated{
+.btn-stayupdated {
   background-color: #688883;
   border: none;
   padding: 1.25vh;
   color: white;
-  margin-top: -20px; 
+  margin-top: -20px;
   cursor: pointer;
   transition: 0.25s;
 }
 
-.btn-stayupdated:hover{
+.btn-stayupdated:hover {
   transform: scale(1.1);
 }
-
