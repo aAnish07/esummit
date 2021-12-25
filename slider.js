@@ -65,7 +65,7 @@ let imgObject = [
     "speakers/Ajeet_Khurana.png",
     "speakers/Tapan_Misra.png",
     "speakers/Devvrat_Arya.png",
-    "speakers/Tapan_Misra.png"
+    "speakers/tapan_misra.jpg"
 ];
 
 let mainImg = 0;
