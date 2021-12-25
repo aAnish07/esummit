@@ -336,8 +336,8 @@ main my-theme {
     }
   }
   .circle {
-    width: 7rem;
-    height: 7rem;
+    width: 5rem;
+    height: 5rem;
     left: 40%;
     top: 45%;
   }
@@ -595,8 +595,10 @@ main my-theme {
   }
   .content, .events, .speakers {
     padding-top: 2rem;
-    font-size: 1.5rem;
+    font-size: 1rem;
     height: max-content;
+    text-align: center;
+    
   }
   .speakers #tiles{
     height: 200vh;
@@ -752,4 +754,35 @@ footer * {
 
 
 
+
+
+
+.input{
+  margin-top: -20px;
+  padding-top: 1.5vh;
+  padding-bottom: 1.5vh;
+  padding-left: 1vh;
+ border: none;
+ border-radius: 1px;
+}
+
+
+::placeholder{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+}
+
+.btn-stayupdated{
+  background-color: #688883;
+  border: none;
+  padding: 1.25vh;
+  color: white;
+  margin-top: -20px; 
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.btn-stayupdated:hover{
+  transform: scale(1.1);
+}
 
