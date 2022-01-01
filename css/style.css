@@ -68,8 +68,8 @@ a {
 }
 
 .navbar-links a {
+  padding: 5px 15px;
   height: 100%;
-  margin-left: 2.6rem;
   transition: 0.7s ease-in;
 }
 .navbar-links a:hover {
