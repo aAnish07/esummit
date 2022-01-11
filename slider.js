@@ -65,12 +65,19 @@ let imgObject = [
     "speakers/ajeetKhurana.png",
     "speakers/tapanMisra.png",
     "speakers/devvratArya.png",
-    "speakers/nagaBharat.png",
+    "speakers/nagaBharath.png",
     "speakers/pankajAgarwal.png",
     "speakers/prakharGupta.png",
     "speakers/sanjayNekkanti.png",
     "speakers/subratKar.png",
     "speakers/vineetPatawari.png",
+    "speakers/puneetBhatia.png",
+    "speakers/annuGrover.png",
+    "speakers/akhilGupta.png",
+    "speakers/suyashSingh.png",
+    "speakers/ashishDeshpande.png",
+    "speakers/priyankaDas.png",
+    "speakers/devvratArya.png",
     // "speakers/ajeetKhurana.png"
 ];
 

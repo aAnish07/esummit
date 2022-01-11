@@ -38,6 +38,8 @@
   <!-- =====Pre Loader(Yash)===== -->
   <div id="loader-container"></div>
 
+
+
   <nav id="navbar">
     <div class="brand-title">
       <a href="#"><img src="images/esummitlogo.png" alt="E-CELL IITH" /></a>
@@ -194,7 +196,7 @@
               <div class="card-grid-space">
                 <a class="card"
                   href="https://dare2compete.com/p/power-talks-and-panel-discussions-e-summit-2022-iit-hyderabad-exordium-of-resurgence-indian-institute-of-technology-ii-250690"
-                  style="background-image: url(images/symposium.png); background-color: black;">
+                  target="_blank" style="background-image: url(images/symposium.png); background-color: black;">
                   <div class="card-content">
                     <h1>Symposium</h1>
                     <p class="comp-content" style="font-size: 12px;">
@@ -202,7 +204,7 @@
                       you spirits - Power Talks and Panel Discussion on a plethora of topics - Symposium is the place
                       for you.
 
-                    <div class="date">21 Jan 2022</div>
+                    <div class="date"></div>
                     <div class="tags">
                       <button class="register-button">Register</button>
                     </div>
@@ -235,7 +237,7 @@
                       more.
                     </p>
 
-                    <div class="date">21 Jan 2022</div>
+                    <div class="date"></div>
                     <div class="tags">
                       <button class="register-button">Register</button>
                     </div>
@@ -458,10 +460,15 @@
           <h3 class="footHeading">Stay Updated</h3>
           <div>
 
-            <input type="text" id="add" required placeholder="Enter your email">
+            <input type="text" name="email" id="add" class="input" required placeholder="Enter your email">
 
-            <button class="btn-stayupdated" onclick="add_data()" type="submit">➤</button>
+            <button class="btn-stayupdated" onclick="add_data()">➤</button>
 
+            <!-- 
+            <input type="text" name="email" class="add" required placeholder="Enter your email">
+
+            <button class="btn-stayupdated" onclick="add_data()">➤</button>
+ -->
           </div>
         </div>
         <h3 class="footHeading">Site Links</h3>
@@ -536,6 +543,8 @@
 <script>
   AOS.init();
 </script>
+
+
 <script>
   // Pre loader (Yash Sharma)
   const id$ = (id) => document.getElementById(id);
@@ -559,7 +568,8 @@
       }, MIN_LOAD_TIME);
     }
   };
-
+</script>
+<script>
 
   // nav bar collapse(Yash Sharma)
   const toggleButton = document.getElementsByClassName('toggle-button')[0]
