@@ -76,7 +76,7 @@ let imgObject = [
     "speakers/akhilGupta.png",
     "speakers/suyashSingh.png",
     "speakers/ashishDeshpande.png",
-    "speakers/priyankaDas.png",
+    // "speakers/priyankaDas.png",
     "speakers/devvratArya.png",
     // "speakers/ajeetKhurana.png"
 ];
