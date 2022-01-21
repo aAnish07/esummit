@@ -62,23 +62,33 @@ function toggleState3() {
 
 let imgObject = [
 
+    "speakers/adityaSingh.png",
     "speakers/ajeetKhurana.png",
-    "speakers/tapanMisra.png",
+    "speakers/akhilGupta.png",
+    "speakers/alkaMehta.png",
+    "speakers/anirudhJaitly.png",
+    "speakers/anjuGupta.png",
+    "speakers/ankurSinha.png",
+    "speakers/annuGrover.png",
+    "speakers/anuragBatra.png",
+    "speakers/ashishChauhan.png",
+    "speakers/ashishDeshpande.png",
+    "speakers/daminiMahajan.png",
+    "speakers/deepthiRavul.png",
     "speakers/devvratArya.png",
+    "speakers/kunikaRathore.png",
+    "speakers/mridulGupta.png",
     "speakers/nagaBharath.png",
     "speakers/pankajAgarwal.png",
     "speakers/prakharGupta.png",
+    "speakers/puneetBhatia.png",
     "speakers/sanjayNekkanti.png",
     "speakers/subratKar.png",
-    "speakers/vineetPatawari.png",
-    "speakers/puneetBhatia.png",
-    "speakers/annuGrover.png",
-    "speakers/akhilGupta.png",
     "speakers/suyashSingh.png",
-    "speakers/ashishDeshpande.png",
-    // "speakers/priyankaDas.png",
-    "speakers/devvratArya.png",
-    // "speakers/ajeetKhurana.png"
+    "speakers/tanviRatna.png",
+    "speakers/tapanMisra.png",
+    "speakers/udayMahajan.png",
+    "speakers/vineetPatawari.png"
 ];
 
 let mainImg = 0;
